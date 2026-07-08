@@ -16,6 +16,6 @@ const urlschema = new mongoose.Schema({
         },{timestamps: true}
         )
 
-    const dbmodel = mongoose.model("dbmodel",urlschema);
+    
 
-    exports.modules = dbmodel
+    module.exports = mongoose.model("dbmodel",urlschema);

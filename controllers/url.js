@@ -1,4 +1,4 @@
-const nanoid = require('nanoid');
+const {nanoid} = require('nanoid');
 const dbmodel = require("../modles/urldb");
 
 async function minishortener(req,res){

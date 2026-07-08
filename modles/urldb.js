@@ -15,3 +15,7 @@ const urlschema = new mongoose.Schema({
             visithistory:[{Timestamp:{type:Date},},],
         },{timestamps: true}
         )
+
+    const dbmodel = mongoose.model("dbmodel",urlschema);
+
+    exports.modules = dbmodel

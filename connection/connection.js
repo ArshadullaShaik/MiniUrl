@@ -5,6 +5,5 @@ function connectmongo(url){
     .then(()=>console.log("db connected bro"))
     .catch((err)=>console.log(err));
 }
-exports.modules = {
-    connectmongo
-}
+
+module.exports = {connectmongo};

@@ -1,0 +1,25 @@
+{
+  "name": "miniurl",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/ArshadullaShaik/MiniUrl#readme",
+  "bugs": {
+    "url": "https://github.com/ArshadullaShaik/MiniUrl/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArshadullaShaik/MiniUrl.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.7.4",
+    "nanoid": "^5.1.16"
+  }
+}

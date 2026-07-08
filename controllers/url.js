@@ -1,13 +1,20 @@
 const nanoid = require('nanoid');
-import urlmodel = require("../models");
+const urlmodel = require("../models");
 
 async function minishortener(req,res){
-    const body = req.body,
-    const id = nanoid(8);
+    try{const body = req.body
+    const id = nanoid(8)
     if(!body.url) return res.status(400).json({message: "Please enter url"})
-    await urlmodel.create(
+    const doc = await urlmodel.create({
         nanoid: id,
-        redirecturl:body.url,
-
-)
+        redirecturl: body.url,
+    }
+);    return res.status(201).json(doc);
+    } catch (err) {
+        console.error(err);
+        return res.status(500).json({ message: "Server error" });
+    }
 }
+
+
+module.exports = minishortener;

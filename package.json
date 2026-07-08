@@ -15,11 +15,13 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "nodemon start index"
   },
   "dependencies": {
     "express": "^5.2.1",
     "mongoose": "^9.7.4",
-    "nanoid": "^5.1.16"
+    "nanoid": "^5.1.16",
+    "nodemon": "^3.1.14"
   }
 }

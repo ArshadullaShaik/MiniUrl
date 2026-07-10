@@ -14,9 +14,11 @@ connectmongo("mongodb://127.0.0.1:27017/urldb");
 app.set("view engine", "ejs");
 app.use(require("express").urlencoded({ extended: false }));
 app.use(require("express").json());
+
+
 app.use("/url", restrictToLoggedinUserOnly, router);
-app.use("/user", userRoute);
-app.use("/",checkAuth, Static);
+app.use(userRoute);
+app.use("/home",checkAuth, Static);
 console.log(connectmongo)
 
 app.listen(PORT,()=>console.log("Server started broo"));

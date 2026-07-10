@@ -9,7 +9,9 @@ async function minishortener(req,res){
         nanoid: id,
         redirecturl: body.redirecturl,
     }
-);    return res.status(201).json(doc);
+);    return res.render('home',{
+        id: id,
+});
     } catch (err) {
         console.error(err);
         return res.status(500).json({ message: "Server error"

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MiniUrl - Home</title>
+    <style>
+      body{font-family: Arial, sans-serif;background:#f7f7f7;display:flex;align-items:center;justify-content:center;height:100vh;margin:0}
+      .card{background:#fff;padding:24px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.08);width:360px}
+      label{display:block;margin-bottom:8px;font-weight:600}
+      input[type="url"]{width:100%;padding:10px 12px;border:1px solid #dcdcdc;border-radius:6px;margin-bottom:12px;font-size:14px}
+      button{display:inline-block;padding:10px 16px;background:#2b6cb0;color:#fff;border:none;border-radius:6px;cursor:pointer}
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <form action="/shorten" method="post">
+        <label for="originalUrl">Enter your original URL</label>
+        <input id="originalUrl" name="redirecturl" type="url" placeholder="https://example.com" required />
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

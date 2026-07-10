@@ -19,6 +19,7 @@
     "start": "nodemon start index"
   },
   "dependencies": {
+    "ejs": "^6.0.1",
     "express": "^5.2.1",
     "mongoose": "^9.7.4",
     "nanoid": "^5.1.16",

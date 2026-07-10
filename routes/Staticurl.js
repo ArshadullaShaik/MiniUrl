@@ -1,13 +1,15 @@
 const express = require('express');
 const router = express.Router();
+const urldb = require('../modles/urldb')
 
-router.get('/', (req, res) =>
-	res.render("signup")
-)
+router.get("/home", async (req, res) => {
+  if (!req.user) return res.redirect("/login");
+  const allurls = await urldb.find({ createdBy: req.user._id });
+  return res.render("home", {
+    urls: allurls,
+  });
+});
 
-router.get('/home', (req, res) =>
-	res.render("home")
-)
 
 router.get('/login', (req, res) =>
 	res.render("login")
